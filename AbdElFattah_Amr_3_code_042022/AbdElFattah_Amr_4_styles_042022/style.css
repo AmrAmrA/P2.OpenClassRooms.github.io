@@ -103,25 +103,153 @@ header {
 }
 
 /* Filters Section */
-.filters_section {
+.filters_text {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    font-size: 18px;
-    font-weight: 700;
+    justify-content: center;
+    align-items: center;
 }
+
+.filters_section {
+    display         : flex;
+    flex-wrap       : wrap;
+    gap             : 30px;
+    font-size       : 18px;
+    font-weight     : 700;
+    margin-bottom   : 30px;
+    cursor          : pointer ;
+}
+/* Every pill containing spans and icons */
 .filter_container {
     display         : flex;
-    justify-content : space-around;
+    justify-content : flex-start;
     align-items     : center;
-    width           : 180px;
+    flex-wrap       : wrap;
+    width           : auto;
+    padding         : 0px 20px;
     height          : 50px;
-    border          : 2px solid red;
-    padding         : 0px 10px;
+    border          : 2px solid grey;
+    border-radius   : 20px;
+}
+/* Animation launched on the hover */
+@keyframes hover {
+    
+    to {
+        border: 0px;
+        background-color: #0065FC;
+        transform: scale(1.1);
+    }
+}
+.filter_container:hover {
+    animation       : hover 1s ease forwards;
+}
+
+/* Fonteawsome icons */
+.icon_container {
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(-30px);
 }
 .filter_icon {
-    border: 1px solid red;
-    padding: 7px;
-    border-radius: 50%;
-    background-color: var(--gray);
+    border          : 1px solid rgb(240, 220, 240);
+    padding         : 14px;
+    border-radius   : 55%;
+    background-color: rgb(240, 220, 240);
+    color           : var(--blue);
+}
+/* Animation launched on the hover */
+.filter_icon:hover {
+    animation: icon_hover 1s ease forwards;
+}
+@keyframes icon_hover {
+    
+    to {
+        color: white;
+    }
+}
+.filters_span {
+    font-weight: 700;
+    text-align: center;
+}
+
+/*  number of available dwellings  */
+.lodging_availability {
+    margin: 35px 0px;
+    display: flex;
+    gap: 25px;
+}
+.info_icon_container {
+    display             : flex;
+    justify-content     : center;
+    align-items         : center;
+    width               : 30px;
+    height              : 30px;
+    padding             : auto;
+    border              : 1px solid gray;
+    border-radius       : 50%;
+}
+.fa-info {
+    color               : var(--blue);
+}
+.lodging_text {
+    color               : black;
+    font-size           : 14px;
+    display             : flex;
+    justify-content     : center;
+    align-items         : center;
+}
+
+/* Marseille dwellings offer */
+.lodging_marseille {
+    font-weight: 900; 
+    font-size: 22px;
+    margin: 20px 0px;
+}
+.marseille_lodging {
+    display         : flex;
+    margin-bottom   : 70px;
+}
+.lodging_choices {
+    width: 75%;
+    gap : 25px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.lodging_choices img {
+    width: 95%;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: block;
+    margin: 10px auto 0px;
+    object-fit: cover;
+}
+.lodging_card {
+    height: 320px;
+    width: 300px;
+    background-color: white; 
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px 5px #ffffff;
+    transition: transform 0.5s ease-in-out;
+}
+.lodging_card:hover {
+    transform: scale(1.04);
+}
+
+.lodging_presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0px 0px 15px
+}
+
+.lodging_name {
+    font-weight: 700;
+}
+
+.blue_star {
+    color: var(--blue);
+}
+.gray_star {
+    color: gray;
 }
