@@ -1,0 +1,127 @@
+/* Variables Colors */
+:root {
+    --blue      : #0065FC; 
+    --lightBlue : #DEEBFF; 
+    --gray      : #F2F2F2; 
+}
+body {
+    font-family : 'Raleway', sans-serif;
+    background-color: var(--gray);
+}
+.global_container {
+    margin      :  0px 35px ;
+}
+/* Design for the logo and the header on the top of the site */
+header {
+    display         : flex;
+    justify-content : space-between;
+    margin          : 25px 0px;
+}
+.booki_logo {
+    width: 100px;
+}
+.header_nav {
+    display     : flex;
+    align-items : center;
+    gap         : 20px;
+    position    : relative;
+}
+.header_nav a {
+    transition: color 0.5s ease-in-out;
+}
+/* Animation color in the link */
+.header_nav a:hover {
+    color: #0065FC;
+}
+/* Setting and animation of the stroke before the links */
+.header_nav a::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: -30px;
+    width: 0%;
+    height: 2px;
+    background-color: #0065FC;
+    transition: width 0.5s ease-in-out;
+}
+.header_nav a:hover::before {
+    width: 100%;
+} 
+
+/* Slogan Section */
+.slogan {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+.slogan_title {
+    color: black;
+    font-weight: 700;
+}
+.slogan_subtitle {
+    font-size: 12px;
+    color: #F2F2F2;
+}
+
+/* Search section */
+.search_container {
+    display: flex;
+    margin: 20px 0px;
+}
+.icon_location_container {
+    background-color: #DEEBFF;
+    width           : 60px;
+    height          : 40px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    border-radius   : 10px 0 0 10px;
+}
+.fa-location-dot {
+    color: black;
+}
+.search_input {
+    outline     : none;
+    border      : none;
+    height      : 40px;
+    padding     : 0px 20px;
+    font-weight : 700;
+    font-size   : 20px;
+}
+.search_button {
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    border: none;
+    background-color: var(--blue);
+    height          : 40px;
+    width: 120px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Filters Section */
+.filters_section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.filter_container {
+    display         : flex;
+    justify-content : space-around;
+    align-items     : center;
+    width           : 180px;
+    height          : 50px;
+    border          : 2px solid red;
+    padding         : 0px 10px;
+}
+.filter_icon {
+    border: 1px solid red;
+    padding: 7px;
+    border-radius: 50%;
+    background-color: var(--gray);
+}
