@@ -209,7 +209,7 @@ header {
     margin-bottom   : 70px;
 }
 .lodging_choices {
-    width: 75%;
+    width: 70%;
     gap : 25px;
     display: flex;
     justify-content: flex-start;
@@ -221,16 +221,17 @@ header {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     display: block;
-    margin: 10px auto 0px;
+    margin: 5px auto 0px;
     object-fit: cover;
 }
 .lodging_card {
     height: 320px;
-    width: 300px;
+    width: 250px;
     background-color: white; 
     border-radius: 15px;
     box-shadow: 0px 0px 0px 5px #ffffff;
     transition: transform 0.5s ease-in-out;
+    cursor: pointer;
 }
 .lodging_card:hover {
     transform: scale(1.04);
@@ -251,5 +252,149 @@ header {
     color: var(--blue);
 }
 .gray_star {
-    color: gray;
+    color: #F2F2F2;
+}
+.black_star {
+    color: black;
+}
+
+/* Most popular hostings section */
+.most_popular_lodgings {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: rgba(243, 142, 221, 0.144);
+    border-radius: 20px;
+}
+.popular_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 50px;
+}
+.popular_text {
+    font-weight: 700;
+    font-size: 20px;
+}
+.popular_text,
+.black_star {
+    align-self: center;
+}
+.popular_card {
+    width: 410px;
+    height: 170px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 0px 0px 10px;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.popular_card:hover {
+    transform: scale(1.02);
+}
+
+.popular_card img {
+    width: 55%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: auto 0px auto 7px;
+}
+.popular_presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    margin: 5px 0px 0px 20px;
+}
+.title_subtitle_popular {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Marseille activities section */
+
+.activities_in_Marseille{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+    gap: 20px;
+}
+.activities_in_Marseille img {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.two_activities_container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.long_image {
+    height: 410px;
+}
+.middle_image {
+    height: 200px;
+}
+.little_image {
+    height: 120px;
+}
+.activities_card {
+    width: 22vw;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+.activities_card:hover {
+    transform: scale(1.05);
+}
+
+
+.activities_text {
+    background-color: rgb(255, 255, 250);
+    height: 50px;
+    margin-top: -4px;
+    padding-left: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+/* Footer section */
+footer {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.about_us_section, 
+.lodging_section, 
+.assistance_section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer p {
+    cursor: pointer;
+}
+footer p::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 1px;
+    width: 0%;
+    height: 1px;
+    background-color: var(--blue);
+    transition: width 0.5s ease-in-out;
+}
+footer p:hover::after {
+    width: 100%;
 }
