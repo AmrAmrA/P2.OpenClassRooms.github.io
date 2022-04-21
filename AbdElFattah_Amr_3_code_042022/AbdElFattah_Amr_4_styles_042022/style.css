@@ -283,6 +283,7 @@ header {
 /* Most popular hostings section */
 .most_popular_lodgings {
     width: 450px;
+    height: 701px;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -304,11 +305,11 @@ header {
     align-self: center;
 }
 .popular_card {
-    width: 410px;
+    width: 325px;
     height: 170px;
     display: flex;
     background-color: rgb(255, 255, 255);
-    margin: 20px 0px 0px 10px;
+    margin: 20px auto;
     border-radius: 15px;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
@@ -319,7 +320,7 @@ header {
 }
 
 .popular_card img {
-    width: 55%;
+    width: 46%;
     height: 150px;
     object-fit: cover;
     border-top-left-radius: 15px;

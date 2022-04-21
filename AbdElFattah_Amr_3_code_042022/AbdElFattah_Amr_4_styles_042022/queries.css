@@ -55,9 +55,55 @@
         gap: 20px;
     }
 }
+
 @media screen and (max-width: 630px) {
     .filters_text {
         width: 100%;
         justify-content: flex-start;
+    }
+}
+
+/* Reponsive design for the hostings houses section */
+@media screen and (max-width: 850px) {
+    .most_popular_lodgings {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .marseille_lodging {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+    }
+    .lodging_choices {
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+    .popular_card {
+        margin: 10px auto;
+    }
+    .most_popular_lodgings {
+        width: 400px;
+        height: 650px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .lodging_card {
+        width: 340px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .popular_card {
+        width: 300px;
+    }
+    .popular_card img {
+        width: 120px;
+    }
+    .popular_card .hotel_tout_bleu_et_blanc_image {
+        width: 146px;
     }
 }
