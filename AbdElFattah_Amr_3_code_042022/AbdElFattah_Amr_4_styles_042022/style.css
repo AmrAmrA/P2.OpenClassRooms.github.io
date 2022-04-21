@@ -53,15 +53,17 @@ header {
 .slogan {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
     margin-bottom: 10px;
 }
 .slogan_title {
     color: black;
     font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 26px;
 }
 .slogan_subtitle {
-    font-size: 12px;
+    font-size: 14px;
     color: #F2F2F2;
 }
 
@@ -81,14 +83,16 @@ header {
 }
 .fa-location-dot {
     color: black;
+    font-size: 20px;
+    padding: 13px;
 }
 .search_input {
-    outline     : none;
-    border      : none;
-    height      : 40px;
-    padding     : 0px 20px;
-    font-weight : 700;
-    font-size   : 20px;
+    outline: none;
+    border: none;
+    height: 40px;
+    padding: 0px 12px;
+    font-weight: 700;
+    font-size: 18px;
 }
 .search_button {
     border-radius: 0 10px 10px 0;
@@ -101,6 +105,21 @@ header {
     font-size: 18px;
     text-align: center;
     cursor: pointer;
+    color: white;
+}
+.container_magnifier {
+    border-radius: 15px;
+    background-color: var(--blue);
+    height: 40px;
+    width: 50px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: -40px;
+    display: none;
+}
+
+.fa-magnifying-glass {
+    font-size: 18px;
     color: white;
 }
 
@@ -126,7 +145,7 @@ header {
     justify-content : flex-start;
     align-items     : center;
     flex-wrap       : wrap;
-    width           : auto;
+    width           : 220px;
     padding         : 0px 20px;
     height          : 50px;
     border          : 2px solid grey;
@@ -183,14 +202,15 @@ header {
     display             : flex;
     justify-content     : center;
     align-items         : center;
-    width               : 30px;
-    height              : 30px;
-    padding             : auto;
+    width               : 18px;
+    height              : 10px;
+    padding             : 15px;
     border              : 1px solid gray;
     border-radius       : 50%;
 }
 .fa-info {
     color               : var(--blue);
+    font-size           : 13px;
 }
 .lodging_text {
     color               : black;
