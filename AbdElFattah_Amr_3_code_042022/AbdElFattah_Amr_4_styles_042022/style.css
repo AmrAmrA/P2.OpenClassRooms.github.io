@@ -6,7 +6,7 @@
 }
 body {
     font-family : 'Raleway', sans-serif;
-    background-color: rgb(240, 155, 155);
+    background-color: rgb(155, 240, 190);
 }
 .global_container {
     margin      :  0px 35px ;
@@ -221,14 +221,15 @@ header {
 }
 
 /* Marseille dwellings offer */
-.lodging_marseille {
-    font-weight: 900; 
-    font-size: 22px;
-    margin: 20px 0px;
+.hostings_container {
+    display: flex;
+    width: 100%;
+    padding: 0px 0px 10px 10px;
 }
 .marseille_lodging {
     display         : flex;
     margin-bottom   : 70px;
+    position        : relative;
 }
 .lodging_choices {
     width: 70%;
@@ -283,7 +284,7 @@ header {
 /* Most popular hostings section */
 .most_popular_lodgings {
     width: 450px;
-    height: 701px;
+    height: 735px;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -340,6 +341,11 @@ header {
 }
 
 /* Marseille activities section */
+.activities h2 {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 0px 20px 10px;
+}
 .activities_in_Marseille{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -406,6 +412,14 @@ header {
     font-weight: 700;
     display: flex;
     align-items: center;
+}
+
+.activities_card {
+    transition: transform 0.5s ease-in-out;
+}
+
+.activities_card:hover {
+    transform: scale(1.03);
 }
 
 /* Footer section */
