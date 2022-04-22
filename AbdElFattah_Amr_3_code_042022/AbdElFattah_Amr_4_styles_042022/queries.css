@@ -144,3 +144,10 @@
         margin-left: 10px;
     }
 }
+
+/* Responsive design for the global container */
+@media screen and (max-width : 400px) {
+    .global_container {
+        margin: 0px 13px;
+    }
+}
