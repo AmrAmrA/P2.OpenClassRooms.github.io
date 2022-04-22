@@ -1,22 +1,44 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 /* Responsive design for the header, the logo and the header nav  */
 @media screen and (max-width: 650px) {
     header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 20px;
         margin: 25px auto;
     }
     .booki_logo {
         position: relative;
         left: calc(100px - 10%);
-        transform: translateX(-30%);
+        -webkit-transform: translateX(-30%);
+            -ms-transform: translateX(-30%);
+                transform: translateX(-30%);
     }
 
     .header_nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 100%;
     }
     .header_nav a::before {
@@ -29,8 +51,12 @@
         width: 0%;
         height: 2px;
         background-color: #0065FC;
+        -webkit-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
         transition: width 0.5s ease-in-out;
-        transform: translate(-5%, -50%);
+        -webkit-transform: translate(-5%, -50%);
+            -ms-transform: translate(-5%, -50%);
+                transform: translate(-5%, -50%);
     }
     .header_nav a:hover::after {
         width: 110%;
@@ -61,7 +87,9 @@
 @media screen and (max-width: 630px) {
     .filters_text {
         width: 100%;
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
 }
 
@@ -74,15 +102,26 @@
 
 @media screen and (max-width: 715px) {
     .marseille_lodging {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 45px;
     }
     .lodging_choices {
         width: 100%;
-        justify-content: center;
-        order: 2;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
     }
     .popular_card {
         margin: 10px auto;
@@ -127,9 +166,14 @@
 /* Responsive design for the activities section */
 @media screen and (max-width: 1000px) {
   .activities_in_Marseille {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   }
   .activities_card {
       width: 48%;
@@ -154,7 +198,10 @@
 /* Responsive design for the footer section */
 @media screen and (max-width : 850px) {
     footer {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 25px;
         margin-left: 10px;
     }

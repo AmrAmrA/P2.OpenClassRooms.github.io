@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 /* Variables Colors */
 :root {
     --blue      : #0065FC; 
@@ -6,28 +13,38 @@
 }
 body {
     font-family : 'Raleway', sans-serif;
-    background-color: rgb(155, 240, 190);
+    background-color: whitesmoke;
 }
 .global_container {
     margin      :  0px 35px ;
 }
 /* Design for the logo and the header on the top of the site */
 header {
+    display         : -webkit-box;
+    display         : -ms-flexbox;
     display         : flex;
-    justify-content : space-between;
+    -webkit-box-pack : justify;
+        -ms-flex-pack : justify;
+            justify-content : space-between;
     margin          : 25px 0px;
 }
 .booki_logo {
     width: 100px;
 }
 .header_nav {
+    display     : -webkit-box;
+    display     : -ms-flexbox;
     display     : flex;
-    align-items : center;
+    -webkit-box-align : center;
+        -ms-flex-align : center;
+            align-items : center;
     gap         : 20px;
     position    : relative;
     color       :rgb(0, 0, 0) ;
 }
 .header_nav a {
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
 }
 /* Animation color in the link */
@@ -43,6 +60,8 @@ header {
     width: 0%;
     height: 2px;
     background-color: #0065FC;
+    -webkit-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
     transition: width 0.5s ease-in-out;
 }
 .header_nav a:hover::before {
@@ -51,24 +70,29 @@ header {
 
 /* Slogan Section */
 .slogan {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 2px;
     margin-bottom: 10px;
 }
 .slogan_title {
-    color: black;
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 26px;
 }
 .slogan_subtitle {
     font-size: 14px;
-    color: #F2F2F2;
 }
 
 /* Search section */
 .search_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 20px 0px;
 }
@@ -76,9 +100,15 @@ header {
     background-color: #DEEBFF;
     width           : 60px;
     height          : 40px;
+    display         : -webkit-box;
+    display         : -ms-flexbox;
     display         : flex;
-    justify-content : center;
-    align-items     : center;
+    -webkit-box-pack : center;
+        -ms-flex-pack : center;
+            justify-content : center;
+    -webkit-box-align     : center;
+        -ms-flex-align     : center;
+            align-items     : center;
     border-radius   : 10px 0 0 10px;
 }
 .fa-location-dot {
@@ -125,14 +155,23 @@ header {
 
 /* Filters Section */
 .filters_text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .filters_section {
+    display         : -webkit-box;
+    display         : -ms-flexbox;
     display         : flex;
-    flex-wrap       : wrap;
+    -ms-flex-wrap       : wrap;
+        flex-wrap       : wrap;
     gap             : 30px;
     font-size       : 18px;
     font-weight     : 700;
@@ -141,10 +180,17 @@ header {
 }
 /* Every pill containing spans and icons */
 .filter_container {
+    display         : -webkit-box;
+    display         : -ms-flexbox;
     display         : flex;
-    justify-content : flex-start;
-    align-items     : center;
-    flex-wrap       : wrap;
+    -webkit-box-pack : start;
+        -ms-flex-pack : start;
+            justify-content : flex-start;
+    -webkit-box-align     : center;
+        -ms-flex-align     : center;
+            align-items     : center;
+    -ms-flex-wrap       : wrap;
+        flex-wrap       : wrap;
     width           : 220px;
     padding         : 0px 20px;
     height          : 50px;
@@ -152,34 +198,60 @@ header {
     border-radius   : 20px;
 }
 /* Animation launched on the hover */
+@-webkit-keyframes hover {
+    
+    to {
+        border: 0px;
+        background-color: #0065FC;
+        color: whitesmoke;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+}
 @keyframes hover {
     
     to {
         border: 0px;
         background-color: #0065FC;
-        transform: scale(1.1);
+        color: whitesmoke;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
     }
 }
 .filter_container:hover {
-    animation       : hover 1s ease forwards;
+    -webkit-animation       : hover 1s ease forwards;
+            animation       : hover 1s ease forwards;
 }
 
 /* Fonteawsome icons */
 .icon_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    transform: translateX(-30px);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-transform: translateX(-30px);
+        -ms-transform: translateX(-30px);
+            transform: translateX(-30px);
 }
 .filter_icon {
     border          : 1px solid rgb(240, 220, 240);
     padding         : 14px;
     border-radius   : 55%;
-    background-color: rgb(240, 220, 240);
+    background-color: rgb(166, 207, 245);
     color           : var(--blue);
 }
 /* Animation launched on the hover */
 .filter_icon:hover {
-    animation: icon_hover 1s ease forwards;
+    -webkit-animation: icon_hover 1s ease forwards;
+            animation: icon_hover 1s ease forwards;
+}
+@-webkit-keyframes icon_hover {
+    
+    to {
+        color: white;
+    }
 }
 @keyframes icon_hover {
     
@@ -195,13 +267,21 @@ header {
 /*  number of available dwellings  */
 .lodging_availability {
     margin: 35px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 25px;
 }
 .info_icon_container {
+    display             : -webkit-box;
+    display             : -ms-flexbox;
     display             : flex;
-    justify-content     : center;
-    align-items         : center;
+    -webkit-box-pack     : center;
+        -ms-flex-pack     : center;
+            justify-content     : center;
+    -webkit-box-align         : center;
+        -ms-flex-align         : center;
+            align-items         : center;
     width               : 18px;
     height              : 10px;
     padding             : 15px;
@@ -215,18 +295,28 @@ header {
 .lodging_text {
     color               : black;
     font-size           : 14px;
+    display             : -webkit-box;
+    display             : -ms-flexbox;
     display             : flex;
-    justify-content     : center;
-    align-items         : center;
+    -webkit-box-pack     : center;
+        -ms-flex-pack     : center;
+            justify-content     : center;
+    -webkit-box-align         : center;
+        -ms-flex-align         : center;
+            align-items         : center;
 }
 
 /* Marseille dwellings offer */
 .hostings_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 0px 0px 10px 10px;
 }
 .marseille_lodging {
+    display         : -webkit-box;
+    display         : -ms-flexbox;
     display         : flex;
     margin-bottom   : 70px;
     position        : relative;
@@ -234,9 +324,14 @@ header {
 .lodging_choices {
     width: 70%;
     gap : 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .lodging_choices img {
     width: 95%;
@@ -245,24 +340,37 @@ header {
     border-top-right-radius: 15px;
     display: block;
     margin: 5px auto 0px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .lodging_card {
     height: 320px;
     width: 250px;
     background-color: white; 
     border-radius: 15px;
-    box-shadow: 0px 0px 0px 5px #ffffff;
+    -webkit-box-shadow: 0px 0px 0px 5px #ffffff;
+            box-shadow: 0px 0px 0px 5px #ffffff;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     cursor: pointer;
 }
 .lodging_card:hover {
-    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+            transform: scale(1.04);
 }
 
 .lodging_presentation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
     margin: 10px 0px 0px 15px
 }
@@ -285,16 +393,26 @@ header {
 .most_popular_lodgings {
     width: 450px;
     height: 735px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 7px;
     background-color: rgba(243, 142, 221, 0.144);
     border-radius: 20px;
 }
 .popular_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     height: 50px;
 }
 .popular_text {
@@ -303,78 +421,159 @@ header {
 }
 .popular_text,
 .black_star {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 .popular_card {
     width: 325px;
     height: 170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: rgb(255, 255, 255);
     margin: 20px auto;
     border-radius: 15px;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     cursor: pointer;
 }
 
 .popular_card:hover {
-    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
 }
 
 .popular_card img {
     width: 46%;
     height: 150px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     margin: auto 0px auto 7px;
 }
 .popular_presentation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 65px;
     margin: 5px 0px 0px 20px;
 }
 .title_subtitle_popular {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
 }
 
 /* Marseille activities section */
 .activities h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 0px 0px 20px 10px;
 }
 .activities_in_Marseille{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
     grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: auto 20px 14rem;
     grid-template-rows: auto 14rem;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 }
+.activities_in_Marseille > *:nth-child(1){
+    -ms-grid-row        : 1;
+    -ms-grid-column      : 1;
+}
+.activities_in_Marseille > *:nth-child(2){
+    -ms-grid-row      : 1;
+    -ms-grid-column      : 3;
+}
+.activities_in_Marseille > *:nth-child(3){
+    -ms-grid-row         : 1;
+    -ms-grid-column      : 5;
+}
+.activities_in_Marseille > *:nth-child(4){
+    -ms-grid-row      : 1;
+    -ms-grid-column      : 7;
+}
+.activities_in_Marseille > *:nth-child(5){
+    -ms-grid-row      : 3;
+    -ms-grid-column      : 1;
+}
+.activities_in_Marseille > *:nth-child(6){
+    -ms-grid-row      : 3;
+    -ms-grid-column      : 3;
+}
+.activities_in_Marseille > *:nth-child(7){
+    -ms-grid-row      : 3;
+    -ms-grid-column      : 5;
+}
+.activities_in_Marseille > *:nth-child(8){
+    -ms-grid-row      : 3;
+    -ms-grid-column      : 7;
+}
 .vieux_port_card {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 6;
     grid-row: 1/7;
 }
 .fort_de_pomegues_card {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1/2;
 }
 .iles_du_frioul_card {
+    -ms-grid-column: 2;
     grid-column: 2/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-row: 2/3;
 }
 .parc_national_des_calanques_card {
+    -ms-grid-column: 3;
     grid-column: 3/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 6;
     grid-row: 1/7;
 }
 .notre_dame_de_la_garde_card {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
     grid-column: 4/5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1/2;
 }
 .parc_longchamp_card {
+    -ms-grid-column: 4;
     grid-column: 4/4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-row: 2/3;
     margin-top: -100px;
 }
@@ -397,7 +596,8 @@ header {
 
 .activities_in_Marseille img {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -410,34 +610,59 @@ header {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .activities_card {
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .activities_card:hover {
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
 }
 
 /* Footer section */
 footer {
-    margin: 30px 0px;
+    margin-top: 35px;
+    background-color: #cfdcee7c;
+    padding: 30px 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .about_us_section, 
 .lodging_section, 
 .assistance_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
 }
 footer a {
     cursor: pointer;
+    -webkit-transition: -webkit-text-decoration 0.5s ease-in-out;
+    transition: -webkit-text-decoration 0.5s ease-in-out;
+    -o-transition: text-decoration 0.5s ease-in-out;
     transition: text-decoration 0.5s ease-in-out;
+    transition: text-decoration 0.5s ease-in-out, -webkit-text-decoration 0.5s ease-in-out;
 }
 footer a:hover {
     text-decoration: underline;
