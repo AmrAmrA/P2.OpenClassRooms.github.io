@@ -6,7 +6,7 @@
 }
 body {
     font-family : 'Raleway', sans-serif;
-    background-color: white;
+    background-color: rgb(240, 155, 155);
 }
 .global_container {
     margin      :  0px 35px ;
@@ -25,7 +25,7 @@ header {
     align-items : center;
     gap         : 20px;
     position    : relative;
-    color       :black ;
+    color       :rgb(0, 0, 0) ;
 }
 .header_nav a {
     transition: color 0.5s ease-in-out;
@@ -340,45 +340,61 @@ header {
 }
 
 /* Marseille activities section */
-
 .activities_in_Marseille{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 500px;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 14rem;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
+.vieux_port_card {
+    grid-column: 1/2;
+    grid-row: 1/7;
+}
+.fort_de_pomegues_card {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.iles_du_frioul_card {
+    grid-column: 2/2;
+    grid-row: 2/3;
+}
+.parc_national_des_calanques_card {
+    grid-column: 3/3;
+    grid-row: 1/7;
+}
+.notre_dame_de_la_garde_card {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+.parc_longchamp_card {
+    grid-column: 4/4;
+    grid-row: 2/3;
+    margin-top: -100px;
+}
+.vieux_port_image,  
+.parc_national_des_calanques_image {
+    height: 575px;
+}
+.notre_dame_de_la_garde_image {
+    height: 200px;
+}
+.fort_de_pomegues_image {
+    height: 300px;
+}
+.parc_longchamp_image  {
+    height: 309px;
+}
+.iles_du_frioul_image {
+    height: 205px;
+}
+
 .activities_in_Marseille img {
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
-
-.two_activities_container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.long_image {
-    height: 410px;
-}
-.middle_image {
-    height: 200px;
-}
-.little_image {
-    height: 120px;
-}
-.activities_card {
-    width: 22vw;
-    transition: transform 0.5s ease-in-out;
-    cursor: pointer;
-}
-.activities_card:hover {
-    transform: scale(1.05);
-}
-
 
 .activities_text {
     background-color: rgb(255, 255, 250);
@@ -405,19 +421,10 @@ footer {
     flex-direction: column;
     gap: 10px;
 }
-footer p {
+footer a {
     cursor: pointer;
+    transition: text-decoration 0.5s ease-in-out;
 }
-footer p::after {
-    content: "";
-    display: block;
-    position: relative;
-    top: 1px;
-    width: 0%;
-    height: 1px;
-    background-color: var(--blue);
-    transition: width 0.5s ease-in-out;
-}
-footer p:hover::after {
-    width: 100%;
+footer a:hover {
+    text-decoration: underline;
 }

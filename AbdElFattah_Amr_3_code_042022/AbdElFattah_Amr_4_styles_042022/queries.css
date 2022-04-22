@@ -89,13 +89,16 @@
         width: 400px;
         height: 650px;
     }
+    .lodging_card {
+        width: 47%;
+    }
 }
-
+ 
 @media screen and (max-width: 615px) {
     .lodging_card {
         width: 340px;
     }
-}
+} 
 @media screen and (max-width: 350px) {
     .popular_card {
         width: 300px;
@@ -105,5 +108,38 @@
     }
     .popular_card .hotel_tout_bleu_et_blanc_image {
         width: 146px;
+    }
+}
+
+/* Responsive design for the activities section */
+@media screen and (max-width: 1000px) {
+  .activities_in_Marseille {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  .activities_card {
+      width: 48%;
+  }
+  .activities_in_Marseille img {
+      height: 250px;
+  }
+  .parc_longchamp_card {
+      margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+    .activities_card {
+        width: 340px
+    }
+}
+
+/* Responsive design for the footer section */
+@media screen and (max-width : 850px) {
+    footer {
+        flex-direction: column;
+        gap: 25px;
+        margin-left: 10px;
     }
 }
