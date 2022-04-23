@@ -1,40 +1,49 @@
-
-header {
-    flex-direction : column;
-    justify-content : center;
-    align-items : center;
-    gap : 20px;
-    margin : 25px auto;
+/* Responsive for the margins on the main section margins */
+@media screen and (max-width: 715px) {
+    .global_container {
+    margin : 0 13px;
     }
-    .booki_logo {
-    position : relative;
-    left : calc(100px - 10%);
-    transform : translateX(-30%);
-    }
-    .header_nav {
-    display : flex;
-    justify-content : space-evenly;
-    align-items : center;
-    width : 100%;
-    }
-    .header_nav a::before {
-    display : none;
-    }
-    .header_nav a::after {
-    content : "";
-    display : block;
-    position : relative;
-    width : 0%;
-    height : 2px;
-    background-color : #0065FC;
-    transition : width 0.5s ease-in-out;
-    transform : translate(-5%,-50%);
-    }
-    .header_nav a:hover::after {
-    width : 110%;
-    margin-right : 10px;
-    }
-    @media screen and (max-width: 585px) {
+    } 
+/* Responsive Design for the header section */
+@media screen and (max-width: 615px) {
+    header {
+        flex-direction : column;
+        justify-content : center;
+        align-items : center;
+        gap : 20px;
+        margin : 25px auto;
+        }
+        .booki_logo {
+        position : relative;
+        left : calc(100px - 10%);
+        transform : translateX(-30%);
+        }
+        .header_nav {
+        display : flex;
+        justify-content : space-evenly;
+        align-items : center;
+        width : 100%;
+        }
+        .header_nav a::before {
+        display : none;
+        }
+        .header_nav a::after {
+        content : "";
+        display : block;
+        position : relative;
+        width : 0%;
+        height : 2px;
+        background-color : #0065FC;
+        transition : width 0.5s ease-in-out;
+        transform : translate(-5%,-50%);
+        }
+        .header_nav a:hover::after {
+        width : 110%;
+        margin-right : 10px;
+        }
+} 
+/* Responsive design for the search section */
+@media screen and (max-width: 585px) {
     .search_button {
     display : none;
     }
@@ -45,6 +54,7 @@ header {
     width : 210px;
     }
     }
+    /* Responsive design for the filters Section */
     @media screen and (max-width: 1000px) {
     .filters_section {
     gap : 20px;
@@ -57,11 +67,13 @@ header {
     justify-content : flex-start;
     }
     }
+    /* Responsive design for the most popular hostings */
     @media screen and (max-width: 850px) {
     .most_popular_lodgings {
     width : 550px;
     }
     }
+    /* Responsive design for the other lodging offers */
     @media screen and (max-width: 715px) {
     .marseille_lodging {
     flex-direction : column;
@@ -74,6 +86,7 @@ header {
     justify-content : center;
     order : 2;
     }
+    /* Responsive design for the most popular hostings */
     .popular_card {
     margin : 10px auto;
     width : 94%;
@@ -93,6 +106,9 @@ header {
     @media screen and (max-width: 615px) {
     .lodging_card {
     width : 500px;
+    }
+    .lodging_stars {
+        width: 18%;
     }
     }
     @media screen and (max-width: 580px) {
@@ -117,6 +133,7 @@ header {
     font-size : 14px;
     }
     }
+    /* Responsive design for the activities section  */
     @media screen and (max-width: 1000px) {
     .activities_in_Marseille {
     display : flex;
@@ -152,6 +169,7 @@ header {
     width : 100%;
     }
     }
+    /* Responsive design for the footer section */
     @media screen and (max-width: 850px) {
     footer {
     flex-direction : column;
@@ -159,8 +177,3 @@ header {
     margin-left : 10px;
     }
     }
-    @media screen and (max-width: 715px) {
-    .global_container {
-    margin : 0 13px;
-    }
-    } 

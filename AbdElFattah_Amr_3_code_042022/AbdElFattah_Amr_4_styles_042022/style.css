@@ -1,16 +1,19 @@
-
-:root {
+/* Root Variables Colors */
+    :root {
     --blue : #0065FC;
     --lightblue : #DEEBFF;
     --gray : #F2F2F2;
     }
+
     body {
     font-family : 'Raleway', sans-serif;
     background-color : whitesmoke;
     }
+
     .global_container {
     margin : 0 35px;
     }
+    /* Header nav and logo */
     header {
     display : flex;
     justify-content : space-between;
@@ -29,6 +32,7 @@
     .header_nav a {
     transition : color 0.5s ease-in-out;
     }
+    /* Animation on the hover for the links in the nav  */
     .header_nav a:hover {
     color : #0065FC;
     }
@@ -45,6 +49,7 @@
     .header_nav a:hover::before {
     width : 100%;
     }
+    /* Slogan Section */
     .slogan {
     display : flex;
     flex-direction : column;
@@ -59,6 +64,7 @@
     .slogan_subtitle {
     font-size : 14px;
     }
+    /* Search Icon, Input and Button */
     .search_container {
     display : flex;
     margin : 20px 0;
@@ -72,10 +78,10 @@
     align-items : center;
     border-radius : 10px 0 0 10px;
     }
-    .fa-location-dot {
-    color : black;
-    font-size : 20px;
+    .search_container .fa-location-dot {
     padding : 13px;
+    width: 50px;
+    height: 50px;
     }
     .search_input {
     outline : none;
@@ -98,6 +104,7 @@
     cursor : pointer;
     color : white;
     }
+    /* Display none for the magnifier icon until 585 pixels */
     .container_magnifier {
     border-radius : 15px;
     background-color : #0065FC;
@@ -117,6 +124,7 @@
     justify-content : center;
     align-items : center;
     }
+    /* Filters Section */
     .filters_section {
     display : flex;
     flex-wrap : wrap;
@@ -137,17 +145,6 @@
     border : grey solid 2px;
     border-radius : 30px;
     }
-    @keyframes hover {
-    to {
-    border : 0;
-    background-color : #0065FC;
-    color : whitesmoke;
-    transform : scale(1.1);
-    }
-    }
-    .filter_container:hover {
-    animation : hover 1s ease forwards;
-    }
     .icon_container {
     display : flex;
     justify-content : flex-start;
@@ -155,15 +152,34 @@
     }
     .filter_icon {
     border : rgb(240, 220, 240) solid 0;
-    padding : 13px;
     border-radius : 55%;
     background-color : rgb(166, 207, 245);
-    color : var(--blue);
+    width: 25px;
+    height: 25px;
+    }
+    .icon_container img {
+        width: 42px;
+        height: 43px;
+        z-index: 2;
+        padding: 8px;
     }
     .filters_span {
     font-weight : 700;
     text-align : center;
     }
+    /* Hoover animation on the filters */
+    @keyframes hover {
+        to {
+        border : 0;
+        background-color : #0065FC;
+        color : whitesmoke;
+        transform : scale(1.1);
+        }
+         }
+        .filter_container:hover {
+        animation : hover 1s ease forwards;
+        }
+    /* Number of hostings available in Marseille  */
     .lodging_availability {
     margin : 35px 0;
     display : flex;
@@ -176,12 +192,10 @@
     width : 18px;
     height : 10px;
     padding : 15px;
-    border : gray solid 1px;
-    border-radius : 50%;
     }
-    .fa-info {
-    color : var(--blue);
-    font-size : 13px;
+    .info_icon_container img {
+        width: 20px;
+        height: 20px;
     }
     .lodging_text {
     color : black;
@@ -195,6 +209,7 @@
     width : 100%;
     padding : 0 0 10px 10px;
     }
+    /* All the hostings availables in Marseille */
     .marseille_lodging {
     display : flex;
     margin-bottom : 70px;
@@ -230,6 +245,7 @@
     transition : transform 0.5s ease-in-out;
     cursor : pointer;
     }
+    /* Zoom Animation on every hosting card */
     .lodging_card:hover {
     transform : scale(1.04);
     }
@@ -245,12 +261,18 @@
     .blue_star {
     color : var(--blue);
     }
-    .gray_star {
-    color : #F2F2F2;
+    .lodging_stars, 
+    .popular_stars {
+        display: flex;
+        justify-content: flex-start;
+        width: 40%;
     }
-    .black_star {
-    color : black;
+    .lodging_choices .fa_star, 
+    .popular_stars   .fa_star {
+        width: 13px;
+        height: 13px;
     }
+    /* Most popular hostings offers in Marseille */
     .most_popular_lodgings {
     width : 450px;
     height : 735px;
@@ -273,6 +295,11 @@
     .popular_text, .black_star {
     align-self : center;
     }
+    .popular_star {
+        width: 15px;
+        height: 15px;
+        align-self: center;
+    }
     .popular_card {
     width : 325px;
     height : 170px;
@@ -284,6 +311,7 @@
     transition : transform 0.5s ease-in-out;
     cursor : pointer;
     }
+      /* Zoom Animation on every hosting card */
     .popular_card:hover {
     transform : scale(1.02);
     }
@@ -307,6 +335,7 @@
     flex-direction : column;
     gap : 10px;
     }
+      /* Activities Section in Marseille */
     .activities h2 {
     display : flex;
     justify-content : flex-start;
@@ -316,6 +345,7 @@
     display : flex;
     gap : 20px;
     }
+    /* The columns with two photos in the same place */
     .two_columns_activities {
     display : flex;
     flex-direction : column;
@@ -354,12 +384,14 @@
     display : flex;
     align-items : center;
     }
+    /* Zoom Animation on the cards */
     .activities_card {
     transition : transform 0.5s ease-in-out;
     }
     .activities_card:hover {
     transform : scale(1.02);
     }
+    /* Footer */
     footer {
     margin-top : 35px;
     background-color : #cfdcee00;
@@ -376,6 +408,7 @@
     cursor : pointer;
     transition : text-decoration 0.5s ease-in-out;
     }
+    /* Underline Animation on the hover of every link */
     footer a:hover {
     text-decoration : underline;
     }
