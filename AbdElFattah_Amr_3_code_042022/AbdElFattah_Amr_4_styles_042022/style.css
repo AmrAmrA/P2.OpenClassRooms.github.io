@@ -159,19 +159,19 @@ header {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .filters_section {
     display         : -webkit-box;
     display         : -ms-flexbox;
     display         : flex;
-    -ms-flex-wrap       : wrap;
-        flex-wrap       : wrap;
+    -ms-flex-wrap   : wrap;
+    flex-wrap       : wrap;
     gap             : 30px;
     font-size       : 18px;
     font-weight     : 700;
@@ -180,22 +180,22 @@ header {
 }
 /* Every pill containing spans and icons */
 .filter_container {
-    display         : -webkit-box;
-    display         : -ms-flexbox;
-    display         : flex;
-    -webkit-box-pack : start;
-        -ms-flex-pack : start;
-            justify-content : flex-start;
-    -webkit-box-align     : center;
-        -ms-flex-align     : center;
-            align-items     : center;
-    -ms-flex-wrap       : wrap;
-        flex-wrap       : wrap;
-    width           : 220px;
-    padding         : 0px 20px;
-    height          : 50px;
-    border          : 2px solid grey;
-    border-radius   : 20px;
+    display                 : -webkit-box;
+    display                 : -ms-flexbox;
+    display                 : flex;
+    -webkit-box-pack        : start;
+    -ms-flex-pack           : start;
+    justify-content         : flex-start;
+    -webkit-box-align       : center;
+    -ms-flex-align          : center;
+    align-items             : center;
+    -ms-flex-wrap           : wrap;
+    flex-wrap               : wrap;
+    width                   : 220px;
+    padding                 : 0px 20px;
+    height                  : 50px;
+    border                  : 2px solid grey;
+    border-radius           : 30px;
 }
 /* Animation launched on the hover */
 @-webkit-keyframes hover {
@@ -231,34 +231,19 @@ header {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-transform: translateX(-30px);
-        -ms-transform: translateX(-30px);
-            transform: translateX(-30px);
+    -webkit-transform: translateX(-22px);
+        -ms-transform: translateX(-22px);
+            transform: translateX(-22px);
 }
 .filter_icon {
-    border          : 1px solid rgb(240, 220, 240);
-    padding         : 14px;
+    border          : 0px solid rgb(240, 220, 240);
+    padding         : 13px;
     border-radius   : 55%;
     background-color: rgb(166, 207, 245);
     color           : var(--blue);
 }
 /* Animation launched on the hover */
-.filter_icon:hover {
-    -webkit-animation: icon_hover 1s ease forwards;
-            animation: icon_hover 1s ease forwards;
-}
-@-webkit-keyframes icon_hover {
-    
-    to {
-        color: white;
-    }
-}
-@keyframes icon_hover {
-    
-    to {
-        color: white;
-    }
-}
+
 .filters_span {
     font-weight: 700;
     text-align: center;
@@ -320,10 +305,13 @@ header {
     display         : flex;
     margin-bottom   : 70px;
     position        : relative;
+    gap             : 20px;
 }
 .lodging_choices {
     width: 70%;
     gap : 25px;
+    padding: 20px 13px 35px 15px;
+    background-color: #F2F2F2;;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -332,6 +320,8 @@ header {
             justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    height: auto;
+    border-radius: 20px;
 }
 .lodging_choices img {
     width: 95%;
@@ -401,8 +391,9 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 7px;
-    background-color: rgba(243, 142, 221, 0.144);
+    background-color: #F2F2F2;
     border-radius: 20px;
+    padding: 20px;
 }
 .popular_container {
     display: -webkit-box;
@@ -417,7 +408,6 @@ header {
 }
 .popular_text {
     font-weight: 700;
-    font-size: 20px;
 }
 .popular_text,
 .black_star {
@@ -434,6 +424,8 @@ header {
     background-color: rgb(255, 255, 255);
     margin: 20px auto;
     border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 0px 5px #ffffff;
+    box-shadow: 0px 0px 0px 5px #ffffff;
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: -webkit-transform 0.5s ease-in-out;
     -o-transition: transform 0.5s ease-in-out;
@@ -449,10 +441,11 @@ header {
 }
 
 .popular_card img {
-    width: 46%;
+    width: 145px;
     height: 150px;
     -o-object-fit: cover;
        object-fit: cover;
+       aspect-ratio: 1/1;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     margin: auto 0px auto 7px;
@@ -490,93 +483,9 @@ header {
     padding: 0px 0px 20px 10px;
 }
 .activities_in_Marseille{
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: auto 20px 14rem;
-    grid-template-rows: auto 14rem;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    display: flex;
 }
-.activities_in_Marseille > *:nth-child(1){
-    -ms-grid-row        : 1;
-    -ms-grid-column      : 1;
-}
-.activities_in_Marseille > *:nth-child(2){
-    -ms-grid-row      : 1;
-    -ms-grid-column      : 3;
-}
-.activities_in_Marseille > *:nth-child(3){
-    -ms-grid-row         : 1;
-    -ms-grid-column      : 5;
-}
-.activities_in_Marseille > *:nth-child(4){
-    -ms-grid-row      : 1;
-    -ms-grid-column      : 7;
-}
-.activities_in_Marseille > *:nth-child(5){
-    -ms-grid-row      : 3;
-    -ms-grid-column      : 1;
-}
-.activities_in_Marseille > *:nth-child(6){
-    -ms-grid-row      : 3;
-    -ms-grid-column      : 3;
-}
-.activities_in_Marseille > *:nth-child(7){
-    -ms-grid-row      : 3;
-    -ms-grid-column      : 5;
-}
-.activities_in_Marseille > *:nth-child(8){
-    -ms-grid-row      : 3;
-    -ms-grid-column      : 7;
-}
-.vieux_port_card {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 6;
-    grid-row: 1/7;
-}
-.fort_de_pomegues_card {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-}
-.iles_du_frioul_card {
-    -ms-grid-column: 2;
-    grid-column: 2/2;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-}
-.parc_national_des_calanques_card {
-    -ms-grid-column: 3;
-    grid-column: 3/3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 6;
-    grid-row: 1/7;
-}
-.notre_dame_de_la_garde_card {
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 1;
-    grid-column: 4/5;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-}
-.parc_longchamp_card {
-    -ms-grid-column: 4;
-    grid-column: 4/4;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-    margin-top: -100px;
-}
+
 .vieux_port_image,  
 .parc_national_des_calanques_image {
     height: 575px;
