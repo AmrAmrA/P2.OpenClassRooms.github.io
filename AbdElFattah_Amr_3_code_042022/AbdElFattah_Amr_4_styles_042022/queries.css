@@ -174,20 +174,25 @@
 /* Responsive design for the activities section */
 @media screen and (max-width: 1000px) {
   .activities_in_Marseille {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-wrap: wrap;
   }
-  .activities_card {
-      width: 48%;
+  .two_columns_activities {
+      flex-direction: row;
+      width: 62%;
   }
+
+  .two_columns_activities .activities_card {
+      width: 300px;
+}
+
+  .single_card {
+      width: 30%;
+  }
+
   .activities_in_Marseille img {
-      height: 250px;
+      height: 200px;
   }
   .parc_longchamp_card {
       margin-top: 0px;
@@ -196,11 +201,15 @@
 
 @media screen and (max-width: 615px) {
     .activities_card {
-        width: 507px;
+        width: 100%;
     }
-    /* .activities h2 {
-        margin-left: 35px;
-    } */
+    .two_columns_activities {
+        flex-direction: column;
+        width: 100%;
+    }
+    .two_columns_activities .activities_card {
+        width: 100%;
+  }
 }
 
 /* Responsive design for the footer section */

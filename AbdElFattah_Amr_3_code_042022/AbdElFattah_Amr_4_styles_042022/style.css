@@ -472,18 +472,28 @@ header {
     gap: 10px;
 }
 
+
+
 /* Marseille activities section */
 .activities h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     padding: 0px 0px 20px 10px;
 }
 .activities_in_Marseille{
     display: flex;
+    gap: 20px;
+}
+
+.two_columns_activities {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
 .vieux_port_image,  
@@ -506,13 +516,13 @@ header {
 .activities_in_Marseille img {
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
 .activities_text {
-    background-color: rgb(255, 255, 250);
+    background-color: rgba(255, 255, 255, 0.4);
     height: 50px;
     margin-top: -4px;
     padding-left: 20px;
@@ -523,8 +533,8 @@ header {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .activities_card {
@@ -536,9 +546,9 @@ header {
 }
 
 .activities_card:hover {
-    -webkit-transform: scale(1.03);
-        -ms-transform: scale(1.03);
-            transform: scale(1.03);
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
 }
 
 /* Footer section */
