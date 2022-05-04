@@ -1,48 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- gatheck007@gmail.com -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!---- Favicon ----->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#1e26ba">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+
     <!---- Style CSS ----->
-    <link rel="stylesheet" href="AbdElFattah_Amr_3_code_042022/AbdElFattah_Amr_4_styles_042022/style.css" type="text/css">
-    <link rel="stylesheet" href="AbdElFattah_Amr_3_code_042022/AbdElFattah_Amr_4_styles_042022/queries.css" type="text/css">
-    <link rel="stylesheet" href="AbdElFattah_Amr_3_code_042022/AbdElFattah_Amr_4_styles_042022/reset.css" type="text/css">
+    <link rel="stylesheet" href="Style/style.css" type="text/css">
+    <link rel="stylesheet" href="Style/queries.css" type="text/css">
+    <link rel="stylesheet" href="Style/reset.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" type="text/css">
+
+    <!-- Fonteawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
     <title>Booki</title>
-    <!---- Twitter Card ----->
-    <meta name="title" content="Booki, projet 2 (p2) par OpenClassrooms - Trouvez votre hébergement pour des vacances de rêve !"> 
-    <meta name="description" content="Booki. Trouvez des hébergements et des activités dans les villes de votre choix
-    Projet 2 (p2) dans le cadre de la formation développeur web chez OpenClassRooms. Réalisé par Abd El Fattah Amr.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://amramra.github.io/P2.OpenClassRooms.github.io/">
-    <meta name="twitter:title" content="Booki. Trouvez des hébergements et des activités dans les villes de votre choix.">
-    <meta name="twitter:description" content="Booki. Trouvez des hébergements et des activités dans les villes de votre choix
-    Projet 2 (p2) dans le cadre de la formation développeur web chez OpenClassRooms. Réalisé par Abd El Fattah Amr.">
-    <meta name="twitter:image"  content="https://amramra.github.io/P2.OpenClassRooms.github.io/AbdElFattah_Amr_1_images_042022/activites/4_small/notre_dame_de_la_garde.jpg">
-      <!---- Google Card ----->
-    <meta property="og:url"                content="https://amramra.github.io/P2.OpenClassRooms.github.io/"/>
-    <meta property="og:type"               content="website"/>
-    <meta property="og:title"              content="Booki. Trouvez des hébergements et des activités dans les villes de votre choix." />
-    <meta property="og:description"        content="Booki. Trouvez des hébergements et des activités dans les villes de votre choix
-    Projet 2 (p2) dans le cadre de la formation développeur web chez OpenClassRooms. Réalisé par Abd El Fattah Amr." />
-    <meta property="og:image"              content="https://amramra.github.io/P2.OpenClassRooms.github.io/AbdElFattah_Amr_1_images_042022/activites/4_small/notre_dame_de_la_garde.jpg" />
 </head>
 <body>
       <!---- Header ----->
     <div class="global_container">
         <header>
-            <img src="AbdElFattah_Amr_1_images_042022/logo/Booki.png" alt="the website logo" class="booki_logo">
+            <img src="images/Booki.png" alt="the website logo" class="booki_logo">
             <nav class="header_nav">
                 <a href="#hostings" class="lodging_link">Hébergements</a>
                 <a href="#activities" class="activities_link">Activités</a>
@@ -54,40 +36,40 @@
             <p class="slogan_subtitle">En plein centre ville ou en pleine nature</p>
         </div>
         <!---- Search Section ----->
-        <div class="search_container">
-            <div class="icon_location_container">
-                <img src="FonteawsomeIcons/location_pin_01.svg" alt="location point" class="fa-location-dot">
+        <form action="" method="post">
+            <div class="search_container">
+                <div class="icon_location_container">
+                    <i class="fas fa-map-marker-alt fa-xl"></i>
+                </div>
+                <input type="text" class="search_input" placeholder="Marseille, France">
+                <button class="search_button">Rechercher</button>
+                <i class="fa-solid fa-magnifying-glass fa-lg magnifier"></i>
             </div>
-            <input type="text" class="search_input" placeholder="Marseille, France">
-            <button class="search_button">Rechercher</button>
-            <div class="container_magnifier">
-                <img src="FonteawsomeIcons/magnifying_glass_solid.svg" alt="Magnifying glass icon">
-            </div>
-        </div>
+        </form>
         <!---- Filters Section ----->
         <nav class="filters_section">
             <p class="filters_text">Filtres</p>
             <div class="filter_container">
                 <div class="icon_container">
-                    <img src="FonteawsomeIcons/money_bill_wave_solid.svg" alt="Bill Wave" class="filter_icon">
+                    <i class="fa-solid fa-money-bill-wave"></i>
                 </div>
                 <span class="filters_span">Economique</span>
             </div>
             <div class="filter_container">
               <div class="icon_container">
-                    <img src="FonteawsomeIcons/child_reaching_solid.svg" alt="a happy child icon" class="filter_icon">
+                <i class="fa-solid fa-child-reaching"></i>
               </div>
                 <span class="filters_span">Familial</span>
             </div>
             <div class="filter_container">
                <div class="icon_container">
-                    <img src="FonteawsomeIcons/heart_solid.svg" alt="a blue heart icon" class="filter_icon">
+                <i class="fa-solid fa-heart"></i>
                </div>
                 <span class="filters_span">Romantique</span>
             </div>
             <div class="filter_container">
                 <div class="icon_container">
-                    <img src="FonteawsomeIcons/dog_solid.svg" alt="a Blue dog icon" class="filter_icon">
+                    <i class="fa-solid fa-dog"></i>
                 </div>
                 <span class="filters_span">Animaux</span>
             </div>
@@ -95,7 +77,7 @@
         <!---- Number of hostings available ----->
         <div class="lodging_availability">
             <div class="info_icon_container">
-                <img src="FonteawsomeIcons/information_circle_outline_03.svg" alt="Informations icon">
+                <i class="fas fa-info"></i>
             </div>
             <span class="lodging_text">Plus de 500 logements sont disponibles dans cette ville</span>
         </div>
@@ -107,161 +89,157 @@
                 </div>
                 <div class="cannebiere_card lodging_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/auberge_la_cannebiere.jpg" alt="A room with a bunk bed" class="cannebiere_image lodging_image">
+                        <img src="images/auberge_la_cannebiere.jpg" alt="A room with a bunk bed" class="cannebiere_image lodging_image">
                         <div class="cannebiere_presentation lodging_presentation">
                             <p class="lodging_name cannebiere_name">Auberge La Cannebière</p>
                             <p class="cannebiere_price lodging_price ">Nuit à partir de <strong>25€</strong></p>
                             <div class="lodging_stars cannebiere_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_20.svg"    class=" fa_star gray_star" alt= "gray star">
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star black_star"></i>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="hotel_du_port_card lodging_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/hotel_du_port.jpg" alt="Two neat beds in a bright room" class="hotel_du_port_image lodging_image">
+                        <img src="images/hotel_du_port.jpg" alt="Two neat beds in a bright room" class="hotel_du_port_image lodging_image">
                         <div class="hotel_du_port_presentation lodging_presentation">
                             <p class="lodging_name hotel_du_port_name">Hôtel du port</p>
                             <p class="lodging_price hotel_du_port_price">Nuit à partir de <strong>52€</strong></p>
                             <div class="lodging_stars hotel_du_port_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="hotel_les_mouettes_card lodging_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/hotel_les_mouettes.jpg" alt="A bed next to a wardrobe" class="hotel_les_mouettes_image lodging_image">
+                        <img src="images/hotel_les_mouettes.jpg" alt="A bed next to a wardrobe" class="hotel_les_mouettes_image lodging_image">
                         <div class="hotel_les_mouetttes_presentation lodging_presentation">
                             <p class="lodging_name hotel_les_mouettes_name">Hôtel Les mouettes</p>
                             <p class="lodging_price hotel_les_mouettes_price">Nuit à partir de <strong>76€</strong></p>
                             <div class="lodging_stars hotel_les_mouettes_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_20.svg"    class=" fa_star gray_star" alt= "gray star">
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star black_star"></i>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="hotel_de_la_mer_card lodging_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/hotel_de_la_mer.jpg" alt="a painting of a sea above a blue bed" class="hotel_de_la_mer_image lodging_image">
+                        <img src="images/hotel_de_la_mer.jpg" alt="a painting of a sea above a blue bed" class="hotel_de_la_mer_image lodging_image">
                         <div class="hotel_de_la_mer_presentation lodging_presentation">
                             <p class="lodging_name hotel_de_la_mer_name">Hôtel de la mer</p>
                             <p class="lodging_price hotel_de_la_mer_price">Nuit à partir de <strong>46€</strong></p>
                             <div class="lodging_stars hotel_de_la_mer_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_20.svg"    class=" fa_star gray_star" alt= "gray star">
-                                <img src="FonteawsomeIcons/star_20.svg"    class=" fa_star gray_star" alt= "gray star">
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star black_star"></i>
+                                <i class="fa-solid fa-star black_star"></i>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="auberge_le_panier_card lodging_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/auberge_le_panier.jpg" alt="Double wooden beds" class="auberge_le_panier_image lodging_image">
+                        <img src="images/auberge_le_panier.jpg" alt="Double wooden beds" class="auberge_le_panier_image lodging_image">
                         <div class="auberge_le_panier_presentation lodging_presentation">
                             <p class="lodging_name auberge_le_panier_name">Auberge Le Panier</p>
                             <p class="lodging_price auberge_le_panier_price">Nuit à partir de <strong>23€</strong></p>
                             <div class="lodging_stars auberge_le_panier_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_20.svg"    class=" fa_star gray_star" alt= "gray star">
                                 <i class="fa-solid fa-star blue_star"></i>
-                                <i class="fa-solid fa-star gray_star "></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star black_star"></i>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="hotel_chez_Amina_card lodging_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/hotel_chez_amina.jpg" alt="Two white beds in front of a television" class="hotel_chez_Amina_image lodging_image">
+                        <img src="images/hotel_chez_amina.jpg" alt="Two white beds in front of a television" class="hotel_chez_Amina_image lodging_image">
                         <div class="hotel_chez_amina_presentation lodging_presentation">
                             <p class="lodging_name hotel_chez_Amina_name">Hôtel chez Amina</p>
                             <p class="lodging_price hotel_chez_Amina_price">Nuit à partir de <strong>96€</strong></p>
                             <div class="lodging_stars hotel_chez_Amina_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
                             </div>
                         </div>
                     </a>
                 </div>
-    
             </div>
             <!---- The most popular hostings offers ----->
             <div class="most_popular_lodgings">
                 <div class="popular_container">
                     <h2 class="popular_text">Les plus populaires</h2>
-                    <img src="FonteawsomeIcons/star_full_outline_01.svg" alt="Black Star" class="popular_star">
+                    <i class="fas fa-chart-line fa-xl popular_star"></i>
                 </div>
                 <a href="#">
                     <div class="popular_card hotel_le_soleil_card">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/hotel_le_soleil_du_matin.jpg" alt="Luxurious room with a green wall" class="hotel_le_soleil_image popular_image">
+                        <img src="images/hotel_le_soleil_du_matin.jpg" alt="Luxurious room with a green wall" class="hotel_le_soleil_image popular_image">
                         <div class="popular_presentation hotel_le_soleil_presentation">
                              <div class="title_subtitle_popular">
                                 <h4 class="popular_title hotel_le_soleil_title">Hôtel Le soleil du matin</h4>
                                 <p class="popular_price hotel_le_soleil_price">Nuit à partir de <strong>71€</strong></p>
                              </div>
                             <div class="popular_stars hotel_le_soleil_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a href="#">
                     <div class="popular_card au_coeur_de_leau_card">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/au_coeur_de_leau.jpg" alt="A room with a modern decoration and a bed" class="au_coeur_de_leau_image popular_image">
+                        <img src="images/au_coeur_de_leau.jpg" alt="A room with a modern decoration and a bed" class="au_coeur_de_leau_image popular_image">
                         <div class="popular_presentation au_coeur_de_leau_presentation">
                              <div class="title_subtitle_popular">
                                 <h4 class="popular_title au_coeur_de_leau_title">Au coeur de l'eau Chambres d'hôtes</h4>
                                 <p class="popular_price au_coeur_de_leau_price">Nuit à partir de <strong>71€</strong></p>
                              </div>
                             <div class="popular_stars au_coeur_de_leau_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_20.svg"    class=" fa_star gray_star" alt= "gray star">
-                                <i class="fa-solid fa-star gray_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star black_star"></i>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a href="#">
                     <div class="popular_card hotel_tout_bleu_et_blanc_card">
-                        <img src="AbdElFattah_Amr_1_images_042022/hebergements/4_small/hotel_tout_bleu_et_blanc.jpg" alt="A white bed with two lamps around it" class="hotel_tout_bleu_et_blanc_image popular_image">
+                        <img src="images/hotel_tout_bleu_et_blanc.jpg" alt="A white bed with two lamps around it" class="hotel_tout_bleu_et_blanc_image popular_image">
                         <div class="popular_presentation hotel_tout_bleu_et_blanc_presentation">
                              <div class="title_subtitle_popular">
                                 <h4 class="popular_title hotel_tout_bleu_et_blanc_title">Hôtel Tout bleu et Blanc</h4>
                                 <p class="popular_price hotel_tout_bleu_et_blanc_price">Nuit à partir de <strong>68€</strong></p>
                              </div>
                             <div class="popular_stars hotel_tout_bleu_et_blanc_stars">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_solid.svg" class="fa_star blue_star" alt="blue star">
-                                <img src="FonteawsomeIcons/star_20.svg"    class=" fa_star gray_star" alt= "gray star">
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star blue_star"></i>
+                                <i class="fa-solid fa-star black_star"></i>
                             </div>
                         </div>
                     </div>
@@ -274,40 +252,40 @@
           <section class="activities_in_Marseille">
             <div class="activities_card vieux_port_card single_card">
                 <a href="#">
-                    <img src="AbdElFattah_Amr_1_images_042022/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Several boats at the dock" class="activities_image vieux_port_image long_image">
+                    <img src="images/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Several boats at the dock" class="activities_image vieux_port_image long_image">
                     <h4 class="activities_text vieux_port_text">Vieux Port</h4>
                 </a>
             </div>
                 <div class="two_columns_activities">
                     <article class="activities_card fort_de_pomegues_card">
                         <a href="#">
-                            <img src="AbdElFattah_Amr_1_images_042022/activites/3_medium/fort_de_pomegues.jpg" alt="rocks and a stone castle in the background " class="activities_image fort_de_pomegues_image middle_image">
+                            <img src="images/fort_de_pomegues.jpg" alt="rocks and a stone castle in the background " class="activities_image fort_de_pomegues_image middle_image">
                             <h4 class="activities_text fort_de_pomegues_text">Fort de Pomègues</h4>
                         </a>
                     </article>
                     <article class="activities_card iles_du_frioul_card">
                         <a href="#">
-                            <img src="AbdElFattah_Amr_1_images_042022/activites/4_small/iles_du_frioul.jpg" alt="rocks and a stone castle in the background " class="activities_image iles_du_frioul_image little_image">
+                            <img src="images/iles_du_frioul.jpg" alt="rocks and a stone castle in the background " class="activities_image iles_du_frioul_image little_image">
                             <h4 class="activities_text iles_du_frioul_text">îles du Frioul</h4>
                         </a>
                     </article>
                 </div>
                 <article class="activities_card parc_national_des_calanques_card single_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/activites/3_medium/parc_national_des_calanques.jpg" alt="Several boats at the dock" class="activities_image parc_national_des_calanques_image long_image">
+                        <img src="images/parc_national_des_calanques.jpg" alt="Several boats at the dock" class="activities_image parc_national_des_calanques_image long_image">
                         <h4 class="activities_text parc_national_des_calanques_text">Parc National des Calanques</h4>
                     </a>
                 </article>
                 <div class="two_columns_activities">
                     <article class="activities_card notre_dame_de_la_garde_card">
                         <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/activites/4_small/notre_dame_de_la_garde.jpg" alt="rocks and a stone castle in the background " class="activities_image notre_dame_de_la_garde_image little_image">
+                        <img src="images/notre_dame_de_la_garde.jpg" alt="rocks and a stone castle in the background " class="activities_image notre_dame_de_la_garde_image little_image">
                         <h4 class="activities_text notre_dame_de_la_garde_text">Notre-Dame-de-la-Garde</h4>
                         </a>
                     </article>
                  <article class="activities_card parc_longchamp_card">
                     <a href="#">
-                        <img src="AbdElFattah_Amr_1_images_042022/activites/3_medium/parc_longchamp.jpg" alt="rocks and a stone castle in the background " class="activities_image parc_longchamp_image middle_image">
+                        <img src="images/parc_longchamp.jpg" alt="rocks and a stone castle in the background " class="activities_image parc_longchamp_image middle_image">
                         <h4 class="activities_text parc_longchamp_text">Parc Longchamp</h4>
                     </a>
                  </article>
@@ -336,5 +314,6 @@
                 <a>Nous contacter</a>
             </div>
         </footer>
-</body>
+        <script src="https://kit.fontawesome.com/78e0d2d009.js" crossorigin="anonymous"></script>
+    </body>
 </html>
