@@ -30,17 +30,21 @@
     }
     /* Animation on the hover for the links in the nav  */
     .lodging_link::before {
-    content : "";
-    display : block;
-    position : relative;
-    top : -37px;
-    width : 100%;
-    height : 2px;
-    transition: background-color 0.5s ease-in-out;
-    background-color: #0065FC;
+     content: "";
+     display: block;
+     position: relative;
+     top: -37px;
+     width: 0;
+     height: 2px;
+     transition: background-color 0.5s ease-in-out;
+     background-color: #0065FC;
+     transform: translateX(-10px);
     }
     .lodging_link {
         color: #0065FC;
+    }
+    .lodging_link:hover::before {
+        width: 124%;
     }
 
     .activities_link:visited {
@@ -59,10 +63,11 @@
         height : 2px;
         transition: background-color 0.5s ease-in-out;
         background-color: #0065FC;
+        transform: translateX(-7px);
         }
 
         .activities_link:hover::before {
-            width : 100%;
+            width : 137%;
             background-color: #0065FC;
             }
 
@@ -104,12 +109,12 @@
     }
     .search_input {
     outline : none;
-    border : none;
     height : 50px;
-    width: 180px;
+    width: 185px;
     padding : 0 12px;
     font-weight : 700;
     font-size : 18px;
+    border-color: #7c75754b;
     }
     .search_button {
     border-radius : 0 10px 10px 0;
@@ -242,9 +247,9 @@
     align-items : center;
     }
     .hostings_container {
-    display : flex;
-    width : 100%;
-    padding : 0 0 10px 10px;
+    width: 100%;
+    position: relative;
+    transform: translateX(10px);
     }
     /* All the hostings availables in Marseille */
     .marseille_lodging a:visited, 
@@ -262,10 +267,10 @@
     gap : 25px;
     padding : 20px 13px 35px 15px;
     display : flex;
-    justify-content : center;
     flex-wrap : wrap;
     height : auto;
     border-radius : 20px;
+    background-color: #0907073d;
     }
     .lodging_choices img {
     width : 95%;
@@ -321,6 +326,7 @@
     gap : 7px;
     border-radius : 20px;
     padding : 20px;
+    background-color: #0907073d;
     }
     .popular_container {
     display : flex;
@@ -356,18 +362,18 @@
     transform : scale(1.02);
     }
     .popular_card img {
-    width : 145px;
-    height : 150px;
-    object-fit : cover;
-    aspect-ratio : 1/1;
-    border-top-left-radius : 15px;
-    border-bottom-left-radius : 15px;
-    margin : auto 0 auto 7px;
+     width: 145px;
+     height: 159px;
+     object-fit: cover;
+     aspect-ratio: 1/1;
+     border-top-left-radius: 15px;
+     border-bottom-left-radius: 15px;
+     margin: auto 0 auto 5px;
     }
     .popular_presentation {
     display : flex;
     flex-direction : column;
-    gap : 65px;
+    gap: 54px;
     margin : 5px 0 0 20px;
     }
     .title_subtitle_popular {
@@ -427,7 +433,9 @@
     }
     /* Zoom Animation on the cards */
     .activities_card {
-    transition : transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 0px 0px 2px 4px rgba(123, 123, 123, 0.4);
+        border-radius: 15px;
     }
     .activities_card:hover {
     transform : scale(1.02);
@@ -438,6 +446,7 @@
     padding : 30px 40px;
     display : flex;
     justify-content : space-between;
+    background-color: #0907073d;
     }
     .about_us_section, .lodging_section, .assistance_section {
     display : flex;
