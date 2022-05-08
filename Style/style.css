@@ -8,11 +8,17 @@
     body {
     font-family : 'Raleway', sans-serif;
     background-color : white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    overflow-x: hidden;
     }
 
     .global_container {
-    margin : 0 35px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
+
     /* Header nav and logo */
     header {
     display : flex;
@@ -108,13 +114,16 @@
     height: 50px;
     }
     .search_input {
-    outline : none;
-    height : 50px;
-    width: 185px;
-    padding : 0 12px;
-    font-weight : 700;
-    font-size : 18px;
-    border-color: #7c75754b;
+    outline         : none;
+    height          : 50px;
+    width           : 185px;
+    padding         : 0 12px;
+    font-weight     : 700;
+    font-size       : 18px;
+    border-top      : 2px solid rgb(242, 242, 242);
+    border-bottom   : 2px solid rgb(242, 242, 242);
+    border-right-color: transparent;
+    border-left-color: transparent;
     }
     .search_button {
     border-radius : 0 10px 10px 0;
@@ -132,12 +141,7 @@
     /* Display none for the magnifier icon until 585 pixels */
     .magnifier {
         color: white;
-        border-radius: 0px 15px 15px 0px;
-        background-color: #0065FC;
-        height: 50px;
-        width: 60px;
         cursor: pointer;
-        text-align: center;
         padding: 15px;
         display: none!important;
     }
@@ -220,7 +224,7 @@
     .lodging_availability {
     margin : 35px 0;
     display : flex;
-    gap : 25px;
+    gap : 2px;
     }
     .info_icon_container {
         height: 2rem;
@@ -246,11 +250,18 @@
     justify-content : center;
     align-items : center;
     }
-    .hostings_container {
-    width: 100%;
+    .hostings_header {
+    width: 90%;
     position: relative;
     transform: translateX(10px);
     }
+    .hostings_title {
+        padding: 30px 0 15px 41px;
+    }
+    .hostings_footer {
+        padding: 0px 0 0px 56px;
+    }
+
     /* All the hostings availables in Marseille */
     .marseille_lodging a:visited, 
     .activities_in_Marseille a:visited {
@@ -262,15 +273,20 @@
     position : relative;
     gap : 20px;
     }
+
+    .left_container {
+     background-color: #F2F2F2;
+     border-radius: 15px;
+    }
     .lodging_choices {
-    width : 70%;
     gap : 25px;
-    padding : 20px 13px 35px 15px;
+    padding : 20px 15px 25px 15px;
     display : flex;
+    justify-content: center;
     flex-wrap : wrap;
     height : auto;
     border-radius : 20px;
-    background-color: #0907073d;
+    margin: 0 auto;
     }
     .lodging_choices img {
     width : 95%;
@@ -282,8 +298,8 @@
     object-fit : cover;
     }
     .lodging_card {
-    height : 320px;
-    width : 250px;
+    height  : 320px;
+    width   : 29%;
     background-color : white;
     border-radius : 15px;
     box-shadow: 0 0 16px #0000002e;
@@ -320,19 +336,22 @@
     /* Most popular hostings offers in Marseille */
     .most_popular_lodgings {
     width : 450px;
-    height: 785px;
+    height: 885px;
     display : flex;
     flex-direction : column;
     gap : 7px;
     border-radius : 20px;
     padding : 20px;
-    background-color: #0907073d;
+    background-color: #f2f2f2;
     }
     .popular_container {
     display : flex;
     justify-content : space-around;
     align-items : flex-end;
     height : 50px;
+    }
+    .popular_title {
+        font-weight: 800;
     }
     .popular_text {
     font-weight : 700;
@@ -385,7 +404,7 @@
     .activities h2 {
     display : flex;
     justify-content : flex-start;
-    padding : 0 0 20px 10px;
+    padding : 0 0 8px 20px;
     }
     .activities_in_Marseille {
     display : flex;
@@ -430,11 +449,12 @@
     font-weight : 700;
     display : flex;
     align-items : center;
+    font-size: 16px;
     }
     /* Zoom Animation on the cards */
     .activities_card {
         transition: transform 0.5s ease-in-out;
-        box-shadow: 0px 0px 2px 4px rgba(123, 123, 123, 0.4);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         border-radius: 15px;
     }
     .activities_card:hover {
@@ -446,7 +466,7 @@
     padding : 30px 40px;
     display : flex;
     justify-content : space-between;
-    background-color: #0907073d;
+    background-color: #f2f2f2;
     }
     .about_us_section, .lodging_section, .assistance_section {
     display : flex;
